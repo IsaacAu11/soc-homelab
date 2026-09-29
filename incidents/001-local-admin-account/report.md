@@ -1,9 +1,9 @@
 # Incident Report: Local Admin Account Creation
 
-**Date/time:** 2026-09-29, 18:43 BST
-**Affected host:** windows-victim (Windows 10 VM
-**Detection source:** **Wazuh** rule 60109, level 8
-**MITRE ATT&CK:** T1098 Account Manipulation (Persistence)
+**Date/time:** 2026-09-29, 18:43 BST\
+**Affected host:** windows-victim (Windows 10 VM)\
+**Detection source:** **Wazuh** rule 60109, level 8\
+**MITRE ATT&CK:** T1098 Account Manipulation (Persistence))
 
 ## Summary
 
