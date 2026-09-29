@@ -1,0 +1,131 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.29",
+  "_id": "EM9D7qABhlkIZY5R2llm",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.0.2.15",
+      "name": "windows-victim",
+      "id": "001"
+    },
+    "manager": {
+      "name": "server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "subjectLogonId": "0xc4ae8",
+          "scriptPath": "%%1793",
+          "passwordLastSet": "%%1794",
+          "homeDirectory": "%%1793",
+          "userParameters": "%%1793",
+          "subjectDomainName": "VICTIMMACHINE",
+          "displayName": "%%1793",
+          "accountExpires": "%%1794",
+          "homePath": "%%1793",
+          "samAccountName": "testuser",
+          "targetUserName": "testuser",
+          "subjectUserSid": "S-1-5-21-2337064153-4094210886-1708778219-1000",
+          "primaryGroupId": "513",
+          "logonHours": "%%1797",
+          "targetDomainName": "VICTIMMACHINE",
+          "profilePath": "%%1793",
+          "userWorkstations": "%%1793",
+          "oldUacValue": "0x0",
+          "newUacValue": "0x15",
+          "targetSid": "S-1-5-21-2337064153-4094210886-1708778219-1001",
+          "userAccountControl": "    %%2080    %%2082    %%2084",
+          "subjectUserName": "vboxuser"
+        },
+        "system": {
+          "eventID": "4720",
+          "keywords": "0x8020000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "message": "\"A user account was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-2337064153-4094210886-1708778219-1000\r\n\tAccount Name:\t\tvboxuser\r\n\tAccount Domain:\t\tVICTIMMACHINE\r\n\tLogon ID:\t\t0xC4AE8\r\n\r\nNew Account:\r\n\tSecurity ID:\t\tS-1-5-21-2337064153-4094210886-1708778219-1001\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tVICTIMMACHINE\r\n\r\nAttributes:\r\n\tSAM Account Name:\ttestuser\r\n\tDisplay Name:\t\t<value not set>\r\n\tUser Principal Name:\t-\r\n\tHome Directory:\t\t<value not set>\r\n\tHome Drive:\t\t<value not set>\r\n\tScript Path:\t\t<value not set>\r\n\tProfile Path:\t\t<value not set>\r\n\tUser Workstations:\t<value not set>\r\n\tPassword Last Set:\t<never>\r\n\tAccount Expires:\t\t<never>\r\n\tPrimary Group ID:\t513\r\n\tAllowed To Delegate To:\t-\r\n\tOld UAC Value:\t\t0x0\r\n\tNew UAC Value:\t\t0x15\r\n\tUser Account Control:\t\r\n\t\tAccount Disabled\r\n\t\t'Password Not Required' - Enabled\r\n\t\t'Normal Account' - Enabled\r\n\tUser Parameters:\t<value not set>\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\tAll\r\n\r\nAdditional Information:\r\n\tPrivileges\t\t-\"",
+          "version": "0",
+          "systemTime": "2026-09-29T17:43:28.7004380Z",
+          "eventRecordID": "9428",
+          "threadID": "804",
+          "computer": "victimmachine",
+          "task": "13824",
+          "processID": "724",
+          "severityValue": "AUDIT_SUCCESS",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "mail": false,
+      "level": 8,
+      "pci_dss": [
+        "8.1.2",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.a.2.I",
+        "164.312.a.2.II",
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "User account enabled or created",
+      "groups": [
+        "windows",
+        "windows_security",
+        "adduser",
+        "account_changed"
+      ],
+      "nist_800_53": [
+        "AC.2",
+        "IA.4",
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Account Manipulation"
+        ],
+        "id": [
+          "T1098"
+        ],
+        "tactic": [
+          "Persistence"
+        ]
+      },
+      "id": "60109",
+      "gpg13": [
+        "7.10"
+      ]
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1790703810.1896736",
+    "timestamp": "2026-09-29T18:43:30.528+0100"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-09-29T17:43:30.528Z"
+    ]
+  },
+  "sort": [
+    1790703810528,
+    82
+  ]
+}
